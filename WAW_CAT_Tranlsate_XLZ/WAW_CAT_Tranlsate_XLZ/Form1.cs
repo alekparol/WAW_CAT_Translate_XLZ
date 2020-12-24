@@ -97,7 +97,6 @@ namespace WAW_CAT_Tranlsate_XLZ
                 listXLZFiles.Items.Add(file);
         }
 
-
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -109,6 +108,80 @@ namespace WAW_CAT_Tranlsate_XLZ
         }
 
         private void listXLZFiles_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void readSourceFiles_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                listSourceFiles.Items.Clear();
+
+                string[] files = Directory.GetFiles(FBD.SelectedPath, "*.html", SearchOption.AllDirectories);
+
+                foreach (string file in files)
+                {
+                    listSourceFiles.Items.Add(file);
+                }
+            }
+        }
+
+        private void readTargetFiles_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                listTargetFiles.Items.Clear();
+
+                string[] files = Directory.GetFiles(FBD.SelectedPath, "*.html", SearchOption.AllDirectories);
+
+                foreach (string file in files)
+                {
+                    listTargetFiles.Items.Add(file);
+                }
+            }
+        }
+
+        private void readXLZFiles_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog FBD = new FolderBrowserDialog();
+
+            if (FBD.ShowDialog() == DialogResult.OK)
+            {
+                listXLZFiles.Items.Clear();
+
+                string[] files = Directory.GetFiles(FBD.SelectedPath, "*.xlz", SearchOption.AllDirectories);
+
+                foreach (string file in files)
+                {
+                    listXLZFiles.Items.Add(file);
+                }
+            }
+        }
+
+        private void clearSourceFiles_Click(object sender, EventArgs e)
+        {
+            listSourceFiles.Items.Clear();
+            MessageBox.Show("The list of source files was cleared.");
+        }
+
+        private void clearTargetFiles_Click(object sender, EventArgs e)
+        {
+            listTargetFiles.Items.Clear();
+            MessageBox.Show("The list of source files was cleared.");
+        }
+
+        private void clearXLZFiles_Click(object sender, EventArgs e)
+        {
+            listXLZFiles.Items.Clear();
+            MessageBox.Show("The list of source files was cleared.");
+        }
+
+        private void translateFiles_Click(object sender, EventArgs e)
         {
 
         }

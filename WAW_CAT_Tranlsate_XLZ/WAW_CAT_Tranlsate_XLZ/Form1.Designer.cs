@@ -75,6 +75,7 @@
             this.readSourceFiles.TabIndex = 3;
             this.readSourceFiles.Text = "Read Files";
             this.readSourceFiles.UseVisualStyleBackColor = true;
+            this.readSourceFiles.Click += new System.EventHandler(this.readSourceFiles_Click);
             // 
             // clearSourceFiles
             // 
@@ -84,6 +85,7 @@
             this.clearSourceFiles.TabIndex = 4;
             this.clearSourceFiles.Text = "Clear Files";
             this.clearSourceFiles.UseVisualStyleBackColor = true;
+            this.clearSourceFiles.Click += new System.EventHandler(this.clearSourceFiles_Click);
             // 
             // readTargetFiles
             // 
@@ -93,6 +95,7 @@
             this.readTargetFiles.TabIndex = 5;
             this.readTargetFiles.Text = "Read Files";
             this.readTargetFiles.UseVisualStyleBackColor = true;
+            this.readTargetFiles.Click += new System.EventHandler(this.readTargetFiles_Click);
             // 
             // clearTargetFiles
             // 
@@ -102,6 +105,7 @@
             this.clearTargetFiles.TabIndex = 6;
             this.clearTargetFiles.Text = "Clear Files";
             this.clearTargetFiles.UseVisualStyleBackColor = true;
+            this.clearTargetFiles.Click += new System.EventHandler(this.clearTargetFiles_Click);
             // 
             // readXLZFiles
             // 
@@ -111,6 +115,7 @@
             this.readXLZFiles.TabIndex = 7;
             this.readXLZFiles.Text = "Read Files";
             this.readXLZFiles.UseVisualStyleBackColor = true;
+            this.readXLZFiles.Click += new System.EventHandler(this.readXLZFiles_Click);
             // 
             // clearXLZFiles
             // 
@@ -120,6 +125,7 @@
             this.clearXLZFiles.TabIndex = 8;
             this.clearXLZFiles.Text = "Clear Files";
             this.clearXLZFiles.UseVisualStyleBackColor = true;
+            this.clearXLZFiles.Click += new System.EventHandler(this.clearXLZFiles_Click);
             // 
             // translateFiles
             // 
@@ -129,6 +135,7 @@
             this.translateFiles.TabIndex = 9;
             this.translateFiles.Text = "Translate";
             this.translateFiles.UseVisualStyleBackColor = true;
+            this.translateFiles.Click += new System.EventHandler(this.translateFiles_Click);
             // 
             // TranslateXLZ
             // 
