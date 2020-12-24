@@ -16,7 +16,7 @@ namespace WAW_CAT_Tranlsate_XLZ
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new TranslateXLZ());
         }
     }
 }
