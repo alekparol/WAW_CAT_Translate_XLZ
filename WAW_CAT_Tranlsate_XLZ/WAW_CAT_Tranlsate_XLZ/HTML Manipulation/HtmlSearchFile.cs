@@ -23,7 +23,7 @@ namespace WAW_CAT_Tranlsate_XLZ
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> foundNodes = GetNodesByTagName(htmlDocument, tagName);
+            IEnumerable<HtmlNode> foundNodes = HtmlNodesByTagName(htmlDocument, tagName);
             List<string> listOfStringNodes = ConvertIEnumerableHtmlNodeToStringList(foundNodes, 3);
 
             return listOfStringNodes;
@@ -47,7 +47,7 @@ namespace WAW_CAT_Tranlsate_XLZ
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile, Encoding.UTF8);
 
-            IEnumerable<HtmlNode> foundNodes = GetNodesByTagNameContainingInAttributeValue(htmlDocument, tagName, attributeName, textContained);
+            IEnumerable<HtmlNode> foundNodes = HtmlNodesByTagNameContainingInAttributeValue(htmlDocument, tagName, attributeName, textContained);
             List<string> listOfStringNodes = ConvertIEnumerableHtmlNodeToStringList(foundNodes, 3);
 
             return listOfStringNodes;
@@ -108,7 +108,7 @@ namespace WAW_CAT_Tranlsate_XLZ
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> foundNodes = GetNodesByTagNameContainingInClass(htmlDocument, tagName, textContained);
+            IEnumerable<HtmlNode> foundNodes = HtmlNodesByTagNameContainingInClass(htmlDocument, tagName, textContained);
             List<string> listOfStringNodes = ConvertIEnumerableHtmlNodeToStringList(foundNodes, 1);
 
             return listOfStringNodes;

@@ -65,7 +65,7 @@ namespace WAW_CAT_Tranlsate_XLZ_Tests
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(sourceFile);
 
-            List<string> sourceUITM = HTML_ChangingNodes.ConvertIEnumerableHtmlNodeToStringList(HTML_ChangingNodes.GetSpanNodesUi(htmlDocument), 1);
+            List<string> sourceUITM = HTML_ChangingNodes.ConvertIEnumerableHtmlNodeToStringList(HTML_ChangingNodes.HtmlSpanNodesUi(htmlDocument), 1);
             //List<string> targetUITM = HTML_ChangingNodes.SearchCorrespondingXmlFile(sourceFile, targetFiles);
 
             //Assert.AreEqual(0, sourceUITM.Count);

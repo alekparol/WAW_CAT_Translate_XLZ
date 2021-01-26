@@ -334,19 +334,19 @@ namespace WAW_CAT_Tranlsate_XLZ
                     XmlDocument xlfDocument = new XmlDocument();
                     xlfDocument.LoadXml(ReadContentXLF(xlzFile));
 
-                    XmlNodeList sourceNodesUi = GetSourceNodesContainingUi(xlfDocument);
+                    //XmlNodeList sourceNodesUi = GetSourceNodesContainingUi(xlfDocument);
 
-                    if (sourceNodesUi.Count > 0)
-                    {
+                    //if (sourceNodesUi.Count > 0)
+                    //{
                         UpdateUIStringsInFileUsingFileLists(xlzFile, xlfDocument, sourceFiles, targetFiles);
-                    }
+                    //}
 
-                    XmlNodeList sourceNodesTm = GetSourceNodesContainingTm(xlfDocument);
+                    //XmlNodeList sourceNodesTm = GetSourceNodesContainingTm(xlfDocument);
 
-                    if (sourceNodesTm.Count > 0)
-                    {
+                    //if (sourceNodesTm.Count > 0)
+                    //{
                         UpdateTMStringsInFileUsingFileLists(xlzFile, xlfDocument, sourceFiles, targetFiles);
-                    }
+                    //}
 
                 }
             }

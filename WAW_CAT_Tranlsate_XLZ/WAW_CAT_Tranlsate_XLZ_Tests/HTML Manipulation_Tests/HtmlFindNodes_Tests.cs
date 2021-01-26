@@ -27,13 +27,13 @@ namespace WAW_CAT_Tranlsate_XLZ_Tests
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\01_Src\en-us\UG-02_BasicShooting_0020.html", 44)]
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\01_Src\en-us\UG-00_Before_0030.html", 5)]
         [DataTestMethod]
-        public void HtmlFindNodes_GetSpanNodes(string inputFile, int expectedOutcome)
+        public void HtmlFindNodes_HtmlSpanNodes(string inputFile, int expectedOutcome)
         {
 
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> nodesFoundByTagName = GetSpanNodes(htmlDocument);
+            IEnumerable<HtmlNode> nodesFoundByTagName = HtmlSpanNodes(htmlDocument);
 
             Assert.AreEqual(expectedOutcome, nodesFoundByTagName.Count());
 
@@ -75,13 +75,13 @@ namespace WAW_CAT_Tranlsate_XLZ_Tests
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\01_Src\en-us\UG-02_BasicShooting_0020.html", 15)]
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\\02_Target\da-dk\UG-02_BasicShooting_0020.html", 15)]
         [DataTestMethod]
-        public void HtmlFindNodes_GetSpanNodesUi(string inputFile, int expectedOutcome)
+        public void HtmlFindNodes_HtmlSpanNodesUi(string inputFile, int expectedOutcome)
         {
 
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> nodesFoundByTagName = GetSpanNodesUi(htmlDocument);
+            IEnumerable<HtmlNode> nodesFoundByTagName = HtmlSpanNodesUi(htmlDocument);
 
             Assert.AreEqual(expectedOutcome, nodesFoundByTagName.Count());
 
@@ -92,13 +92,13 @@ namespace WAW_CAT_Tranlsate_XLZ_Tests
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\01_Src\en-us\UG-02_BasicShooting_0040.html", 12)]
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\\02_Target\da-dk\UG-02_BasicShooting_0040.html", 12)]
         [DataTestMethod]
-        public void HtmlFindNodes_GetSpanNodesTm(string inputFile, int expectedOutcome)
+        public void HtmlFindNodes_HtmlSpanNodesTm(string inputFile, int expectedOutcome)
         {
 
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> nodesFoundByTagName = GetSpanNodesTm(htmlDocument);
+            IEnumerable<HtmlNode> nodesFoundByTagName = HtmlSpanNodesTm(htmlDocument);
 
             Assert.AreEqual(expectedOutcome, nodesFoundByTagName.Count());
 
@@ -109,13 +109,13 @@ namespace WAW_CAT_Tranlsate_XLZ_Tests
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\01_Src\en-us\UG-02_BasicShooting_0040.html", 15)]
         [DataRow(@"C:\Users\Aleksander.Parol\Desktop\GLT_Engineering\Scripts\WAW CAT HTML Script\\02_Target\da-dk\UG-02_BasicShooting_0040.html", 15)]
         [DataTestMethod]
-        public void HtmlFindNodes_GetSpanNodesUiTm(string inputFile, int expectedOutcome)
+        public void HtmlFindNodes_HtmlSpanNodesUiTm(string inputFile, int expectedOutcome)
         {
 
             HtmlDocument htmlDocument = new HtmlDocument();
             htmlDocument.Load(inputFile);
 
-            IEnumerable<HtmlNode> nodesFoundByTagName = GetSpanNodesUiTm(htmlDocument);
+            IEnumerable<HtmlNode> nodesFoundByTagName = HtmlSpanNodesUiTm(htmlDocument);
 
             Assert.AreEqual(expectedOutcome, nodesFoundByTagName.Count());
 
