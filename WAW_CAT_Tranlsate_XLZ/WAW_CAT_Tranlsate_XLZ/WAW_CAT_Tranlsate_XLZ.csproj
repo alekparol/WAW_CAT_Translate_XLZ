@@ -38,6 +38,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,9 +58,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HTML Manipulation\HtmlFindNodes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regex XPath\RegexExpressions.cs" />
+    <Compile Include="HTML Manipulation\HtmlConvertNodes.cs" />
+    <Compile Include="HTML Manipulation\HtmlSearchFile.cs" />
     <Compile Include="Utilities.cs" />
+    <Compile Include="XLZ Manipulation\XmlFindNodes.cs" />
+    <Compile Include="XLZ Manipulation\XLZ_Manipulation.cs" />
+    <Compile Include="Regex XPath\XPathExpressions.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

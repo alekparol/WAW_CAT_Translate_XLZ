@@ -1,6 +1,6 @@
 ﻿namespace WAW_CAT_Tranlsate_XLZ
 {
-    partial class TranslateXLZ
+    partial class Form1
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -137,7 +137,7 @@
             this.translateFiles.UseVisualStyleBackColor = true;
             this.translateFiles.Click += new System.EventHandler(this.translateFiles_Click);
             // 
-            // TranslateXLZ
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,7 +152,7 @@
             this.Controls.Add(this.listXLZFiles);
             this.Controls.Add(this.listTargetFiles);
             this.Controls.Add(this.listSourceFiles);
-            this.Name = "TranslateXLZ";
+            this.Name = "Form1";
             this.Text = "Translate XLZ";
             this.ResumeLayout(false);
 

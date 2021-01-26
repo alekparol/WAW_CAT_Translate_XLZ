@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using static WAW_CAT_Tranlsate_XLZ.Utilities;
 
 namespace WAW_CAT_Tranlsate_XLZ
 {
-    public partial class TranslateXLZ : Form
+    public partial class Form1 : System.Windows.Forms.Form
     {
-        public TranslateXLZ()
+        public Form1()
         {
             InitializeComponent();
 
@@ -184,6 +186,69 @@ namespace WAW_CAT_Tranlsate_XLZ
         private void translateFiles_Click(object sender, EventArgs e)
         {
 
+            List<string> sourceFilesList = new List<string>();
+            List<string> targetFilesList = new List<string>();
+            List<string> xlzFilesList = new List<string>();
+
+            foreach(var obj in listSourceFiles.Items)
+            {
+                sourceFilesList.Add(obj.ToString());
+            }
+
+            foreach (var obj in listTargetFiles.Items)
+            {
+                targetFilesList.Add(obj.ToString());
+            }
+
+            foreach (var obj in listXLZFiles.Items)
+            {
+                xlzFilesList.Add(obj.ToString());
+            }
+
+            G(xlzFilesList, sourceFilesList, targetFilesList);
+            MessageBox.Show("Operation resulted in a success.");
+
+            /*foreach (string xlzFile in xlzFilesList)
+            {
+                if (sourceFilesList.Count > 0 && targetFilesList.Count > 0)
+                {
+                    string sourceFile = sourceFilesList.Find(x => Path.GetFileName(x) == Path.GetFileName(xlzFile).Replace(".xlz", ""));
+                    
+                    List<string> sourceUITM = HTML_ChangingNodes.SearchXmlFile(sourceFile);
+                    List<string> targetUITM = HTML_ChangingNodes.SearchCorrespondingXmlFile(sourceFile, targetFilesList);
+
+                    for (int i = 0; i < sourceUITM.Count; i++)
+                    {
+                        XmlDocument xlfDocument = new XmlDocument();
+                        xlfDocument.LoadXml(XLZ_Manipulation.ReadContentXLF(xlzFile));
+
+                        XmlNodeList sourceNodes = XML_ChangingNodes.GetSourceNodesContaining(xlfDocument, sourceUITM[i]);
+
+                        foreach (XmlNode sourceNode in sourceNodes)
+                        {
+
+                            byte[] bytes = Encoding.Default.GetBytes(sourceUITM[i]);
+                            sourceUITM[i] = Encoding.UTF8.GetString(bytes);
+
+                            bytes = Encoding.Default.GetBytes(targetUITM[i]);
+                            targetUITM[i] = Encoding.UTF8.GetString(bytes);
+
+                            XmlNode targetNode = xlfDocument.CreateNode("element", "target", "");
+                            targetNode.InnerXml = sourceNode.InnerXml.Replace(sourceUITM[i], targetUITM[i]);
+
+                            sourceNode.ParentNode.AppendChild(targetNode);
+                        }
+
+                        XLZ_Manipulation.UpdateContentXLF(xlzFile, xlfDocument.OuterXml);
+
+                    }
+
+                }*/
+            //}
+
+            //Utilities.f4(xlzFilesList, sourceFilesList, targetFilesList);
+
+            //MessageBox.Show("Operation resulted in a success.");
         }
     }
 }
